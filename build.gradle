@@ -11,8 +11,13 @@ plugins {
     id 'org.openjfx.javafxplugin' version '0.1.0' // Apply the JavaFX plugin
 }
 
-repositories {
-    mavenCentral() // Use Maven Central to resolve dependencies
+allprojects {
+    group = "com.drvkdclinic"
+    version = "0.0.1"
+
+    repositories {
+        mavenCentral()
+    }
 }
 
 dependencies {
@@ -45,6 +50,3 @@ javafx {
 application {
     mainClass = 'com.drvkdclinic.Main' // Specify the main class of your application
 }
-
-version = '1.0'
-group = 'com.drvkdclinic'
