@@ -8,3 +8,13 @@
  */
 
 rootProject.name = 'dr-vkd-clinic'
+
+include 'entity'
+include 'dao-interfaces'
+include 'db-dao'
+include 'db-connection'
+include 'repository'
+include 'services'
+include 'app-config'
+include 'app'
+include 'ui-javafx'
