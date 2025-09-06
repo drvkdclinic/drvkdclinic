@@ -1,6 +1,15 @@
 package com.drvkdclinic.entity;
 
 public class Person {
+
+    public int getId() {
+        return mId;
+    }
+
+    public void setId(int id) {
+        this.mId = id;
+    }
+
     public String getFirstName() {
         return mFirstName;
     }
@@ -25,6 +34,7 @@ public class Person {
         this.mSurName = surName;
     }
 
+    private int mId;
     private String mFirstName;
     private String mMiddleName;
     private String mSurName;
