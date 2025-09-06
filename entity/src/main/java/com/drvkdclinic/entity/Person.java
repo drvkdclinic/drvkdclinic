@@ -5,24 +5,24 @@ public class Person {
         return mFirstName;
     }
 
-    public void setFirstName(String mFirstName) {
-        this.mFirstName = mFirstName;
+    public void setFirstName(String firstName) {
+        this.mFirstName = firstName;
     }
 
     public String getMiddleName() {
         return mMiddleName;
     }
 
-    public void setMiddleName(String mMiddleName) {
-        this.mMiddleName = mMiddleName;
+    public void setMiddleName(String middleName) {
+        this.mMiddleName = middleName;
     }
 
     public String getSurName() {
         return mSurName;
     }
 
-    public void setSurName(String mSurName) {
-        this.mSurName = mSurName;
+    public void setSurName(String surName) {
+        this.mSurName = surName;
     }
 
     private String mFirstName;
