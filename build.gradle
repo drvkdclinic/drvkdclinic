@@ -8,22 +8,38 @@
 plugins {
     id 'java' // Apply the Java plugin for basic Java project functionalities
     id 'application' // Apply the application plugin to create runnable JARs and scripts
-    id 'org.openjfx.javafxplugin' version '0.1.0' // Apply the JavaFX plugin
 }
 
+repositories {
+    mavenCentral()
+}
+
+rootProject.group = 'com.drvkdclinic'
+rootProject.version = '1.0.0'
+
 allprojects {
-    group = "com.drvkdclinic"
-    version = "0.0.1"
+    group = rootProject.group
+    version = rootProject.version
 
     repositories {
         mavenCentral()
     }
 }
 
-dependencies {
-    implementation 'org.postgresql:postgresql:42.7.7'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.11.0'
+subprojects {
+    apply plugin: 'java'
+
+    group = rootProject.group
+    version = rootProject.version
+
+    repositories {
+        mavenCentral()
+    }
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
 }
 
 java {
@@ -40,11 +56,6 @@ jar {
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
     duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
-}
-
-javafx {
-    version = "21" // Specify the JavaFX version
-    modules = [ 'javafx.controls', 'javafx.fxml' ] // Specify the JavaFX modules required
 }
 
 application {

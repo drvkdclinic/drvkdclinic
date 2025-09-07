@@ -1,0 +1,9 @@
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    implementation project(':repository-interfaces')
+    implementation project(':entity')
+    implementation 'org.postgresql:postgresql:42.7.7'
+}

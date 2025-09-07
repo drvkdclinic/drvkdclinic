@@ -1,19 +1,18 @@
+// ui-javafx/build.gradle
 plugins {
-    id 'java'
-}
-
-repositories {
-    mavenCentral()
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
 dependencies {
-    implementation project(":entity")
-    implementation project(":app")
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation project(':entity')
+    implementation project(':app')
+    implementation 'org.openjfx:javafx-controls:21'
+    implementation 'org.openjfx:javafx-fxml:21'
 }
 
-test {
-    useJUnitPlatform()
+
+javafx {
+    version = "21" // Specify the JavaFX version
+    modules = [ 'javafx.controls', 'javafx.fxml' ] // Specify the JavaFX modules required
 }
