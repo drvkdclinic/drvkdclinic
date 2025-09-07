@@ -15,7 +15,7 @@ repositories {
 }
 
 rootProject.group = 'com.drvkdclinic'
-rootProject.version = '1.0.0'
+rootProject.version = '0.0.1'
 
 allprojects {
     group = rootProject.group
